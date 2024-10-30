@@ -318,7 +318,7 @@ Documentation:
     <message id="60012" name="STORM32_GIMBAL_MANAGER_CONTROL">
       <!-- Stable -->
       <description>Message to a gimbal manager to control the gimbal attitude. Angles and rates can be set to NaN according to use case. A gimbal device is never to react to this message.</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="gimbal_id" instance="true">Gimbal ID of the gimbal manager to address (component ID or 1-6 for non-MAVLink gimbal, 0 for all gimbals). Send command multiple times for more than one but not all gimbals.</field>
       <field type="uint8_t" name="client" enum="MAV_STORM32_GIMBAL_MANAGER_CLIENT">Client which is contacting the gimbal manager (must be set).</field>
@@ -332,7 +332,7 @@ Documentation:
     <message id="60013" name="STORM32_GIMBAL_MANAGER_CONTROL_PITCHYAW">
       <!-- Stable -->
       <description>Message to a gimbal manager to control the gimbal tilt and pan angles. Angles and rates can be set to NaN according to use case. A gimbal device is never to react to this message.</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="gimbal_id" instance="true">Gimbal ID of the gimbal manager to address (component ID or 1-6 for non-MAVLink gimbal, 0 for all gimbals). Send command multiple times for more than one but not all gimbals.</field>
       <field type="uint8_t" name="client" enum="MAV_STORM32_GIMBAL_MANAGER_CLIENT">Client which is contacting the gimbal manager (must be set).</field>
@@ -346,7 +346,7 @@ Documentation:
     <message id="60014" name="STORM32_GIMBAL_MANAGER_CORRECT_ROLL">
       <!-- Quite stable -->
       <description>Message to a gimbal manager to correct the gimbal roll angle. This message is typically used to manually correct for a tilted horizon in operation. A gimbal device is never to react to this message.</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="gimbal_id" instance="true">Gimbal ID of the gimbal manager to address (component ID or 1-6 for non-MAVLink gimbal, 0 for all gimbals). Send command multiple times for more than one but not all gimbals.</field>
       <field type="uint8_t" name="client" enum="MAV_STORM32_GIMBAL_MANAGER_CLIENT">Client which is contacting the gimbal manager (must be set).</field>

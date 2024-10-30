@@ -49,19 +49,19 @@
   <messages>
     <message id="150" name="FLEXIFUNCTION_SET">
       <description>Depreciated but used as a compiler flag.  Do not remove</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
     </message>
     <message id="151" name="FLEXIFUNCTION_READ_REQ">
       <description>Request reading of flexifunction data</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="int16_t" name="read_req_type">Type of flexifunction data requested</field>
       <field type="int16_t" name="data_index">index into data where needed</field>
     </message>
     <message id="152" name="FLEXIFUNCTION_BUFFER_FUNCTION">
       <description>Flexifunction type and parameters for component at function index from buffer</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint16_t" name="func_index">Function index</field>
       <field type="uint16_t" name="func_count">Total count of functions</field>
@@ -71,14 +71,14 @@
     </message>
     <message id="153" name="FLEXIFUNCTION_BUFFER_FUNCTION_ACK">
       <description>Flexifunction type and parameters for component at function index from buffer</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint16_t" name="func_index">Function index</field>
       <field type="uint16_t" name="result">result of acknowledge, 0=fail, 1=good</field>
     </message>
     <message id="155" name="FLEXIFUNCTION_DIRECTORY">
       <description>Acknowldge success or failure of a flexifunction command</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="directory_type">0=inputs, 1=outputs</field>
       <field type="uint8_t" name="start_index">index of first directory entry to write</field>
@@ -87,7 +87,7 @@
     </message>
     <message id="156" name="FLEXIFUNCTION_DIRECTORY_ACK">
       <description>Acknowldge success or failure of a flexifunction command</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="directory_type">0=inputs, 1=outputs</field>
       <field type="uint8_t" name="start_index">index of first directory entry to write</field>
@@ -96,7 +96,7 @@
     </message>
     <message id="157" name="FLEXIFUNCTION_COMMAND">
       <description>Acknowldge success or failure of a flexifunction command</description>
-      <field type="uint8_t" name="target_system">System ID</field>
+      <field type="uint32_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="command_type">Flexifunction command type</field>
     </message>

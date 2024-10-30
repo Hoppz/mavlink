@@ -525,7 +525,7 @@
     <!-- Transactions for parameter protocol -->
     <message id="19" name="PARAM_ACK_TRANSACTION">
       <description>Response from a PARAM_SET message when it is used in a transaction.</description>
-      <field type="uint8_t" name="target_system">Id of system that sent PARAM_SET message.</field>
+      <field type="uint32_t" name="target_system">Id of system that sent PARAM_SET message.</field>
       <field type="uint8_t" name="target_component">Id of system that sent PARAM_SET message.</field>
       <field type="char[16]" name="param_id">Parameter id, terminated by NULL if the length is less than 16 human-readable chars and WITHOUT null termination (NULL) byte if the length is exactly 16 chars - applications have to provide 16+1 bytes storage if the ID is stored as string</field>
       <field type="float" name="param_value">Parameter value (new value if PARAM_ACCEPTED, current value otherwise)</field>
@@ -555,7 +555,7 @@
         The consumer must stream the current limits in VELOCITY_LIMITS at 1 Hz or more (when limits are being set).
         The consumer should latch the limits until a new limit is received or the mode is changed.
       </description>
-      <field type="uint8_t" name="target_system">System ID (0 for broadcast).</field>
+      <field type="uint32_t" name="target_system">System ID (0 for broadcast).</field>
       <field type="uint8_t" name="target_component">Component ID (0 for broadcast).</field>
       <field type="float" name="horizontal_speed_limit" default="NaN" units="m/s">Limit for horizontal movement in MAV_FRAME_LOCAL_NED. NaN: Field not used (ignore)</field>
       <field type="float" name="vertical_speed_limit" default="NaN" units="m/s">Limit for vertical movement in MAV_FRAME_LOCAL_NED. NaN: Field not used (ignore)</field>
@@ -653,7 +653,7 @@
         For instance, the channels data could contain failsafe values configured in the receiver; the default is to carry the last valid data.
         Note: The RC channels fields are extensions to ensure that they are located at the end of the serialized payload and subject to MAVLink's trailing-zero trimming.
       </description>
-      <field type="uint8_t" name="target_system">System ID (ID of target system, normally flight controller).</field>
+      <field type="uint32_t" name="target_system">System ID (ID of target system, normally flight controller).</field>
       <field type="uint8_t" name="target_component">Component ID (normally 0 for broadcast).</field>
       <field type="uint32_t" name="time_last_update_ms" units="ms">Time when the data in the channels field were last updated (time since boot in the receiver's time domain).</field>
       <field type="uint16_t" name="flags" enum="RADIO_RC_CHANNELS_FLAGS" display="bitmask">Radio RC channels status flags.</field>
