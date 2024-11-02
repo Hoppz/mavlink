@@ -33,14 +33,14 @@
     </message>
     <message id="50004" name="CUBEPILOT_FIRMWARE_UPDATE_START">
       <description>Start firmware update with encapsulated data.</description>
-      <field type="uint32_t" name="target_system">System ID.</field>
+      <field type="uint16_t" name="target_system">System ID.</field>
       <field type="uint8_t" name="target_component">Component ID.</field>
       <field type="uint32_t" name="size" units="bytes">FW Size.</field>
       <field type="uint32_t" name="crc">FW CRC.</field>
     </message>
     <message id="50005" name="CUBEPILOT_FIRMWARE_UPDATE_RESP">
       <description>offset response to encapsulated data.</description>
-      <field type="uint32_t" name="target_system">System ID.</field>
+      <field type="uint16_t" name="target_system">System ID.</field>
       <field type="uint8_t" name="target_component">Component ID.</field>
       <field type="uint32_t" name="offset" units="bytes">FW Offset.</field>
     </message>

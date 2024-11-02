@@ -58,7 +58,7 @@
       <description>Message encoding a command with parameters as scaled integers and additional metadata. Scaling depends on the actual command value.</description>
       <field type="uint32_t" name="utc_time">UTC time, seconds elapsed since 01.01.1970</field>
       <field type="uint64_t" name="vehicle_timestamp">Microseconds elapsed since vehicle boot</field>
-      <field type="uint32_t" name="target_system">System ID</field>
+      <field type="uint16_t" name="target_system">System ID</field>
       <field type="uint8_t" name="target_component">Component ID</field>
       <field type="uint8_t" name="frame" enum="MAV_FRAME">The coordinate system of the COMMAND, as defined by MAV_FRAME enum</field>
       <field type="uint16_t" name="command" enum="MAV_CMD">The scheduled action for the mission item, as defined by MAV_CMD enum</field>
@@ -76,7 +76,7 @@
       <description>Send a command with up to seven parameters to the MAV and additional metadata</description>
       <field type="uint32_t" name="utc_time">UTC time, seconds elapsed since 01.01.1970</field>
       <field type="uint64_t" name="vehicle_timestamp">Microseconds elapsed since vehicle boot</field>
-      <field type="uint32_t" name="target_system">System which should execute the command</field>
+      <field type="uint16_t" name="target_system">System which should execute the command</field>
       <field type="uint8_t" name="target_component">Component which should execute the command, 0 for all components</field>
       <field type="uint16_t" name="command" enum="MAV_CMD">Command ID, as defined by MAV_CMD enum.</field>
       <field type="uint8_t" name="confirmation">0: First transmission of this command. 1-255: Confirmation transmissions (e.g. for kill command)</field>
