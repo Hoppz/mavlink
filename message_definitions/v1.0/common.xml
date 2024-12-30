@@ -7164,7 +7164,7 @@
       <field type="uint8_t" name="gimbal_device_id" instance="true">Gimbal device ID that this gimbal manager is responsible for. Component ID of gimbal device (or 1-6 for non-MAVLink gimbal).</field>
       <field type="uint8_t" name="primary_control_sysid">System ID of MAVLink component with primary control, 0 for none.</field>
       <field type="uint8_t" name="primary_control_compid">Component ID of MAVLink component with primary control, 0 for none.</field>
-      <field type="uint8_t" name="secondary_control_sysid">System ID of MAVLink component with secondary control, 0 for none.</field>
+      <field type="uint16_t" name="secondary_control_sysid">System ID of MAVLink component with secondary control, 0 for none.</field>
       <field type="uint8_t" name="secondary_control_compid">Component ID of MAVLink component with secondary control, 0 for none.</field>
     </message>
     <message id="282" name="GIMBAL_MANAGER_SET_ATTITUDE">
